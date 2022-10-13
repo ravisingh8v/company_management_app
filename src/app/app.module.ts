@@ -15,6 +15,7 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     NgbModule,
     CoreModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

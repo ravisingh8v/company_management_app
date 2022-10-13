@@ -29,6 +29,8 @@ export class CompanyFormComponent implements OnInit {
   onSubmit() {
     this.isSubmitted = true
 
+
+
   }
   onReset() {
 

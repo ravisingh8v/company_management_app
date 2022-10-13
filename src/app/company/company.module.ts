@@ -6,6 +6,8 @@ import { CompanyComponent } from './company.component';
 import { CompanyFormComponent } from './company-form/company-form.component';
 import { CompanyListComponent } from './company-list/company-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ApiService } from '../share/service/api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,6 +20,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     CompanyRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule
+  ],
+  providers: [
+    ApiService
   ]
+
 })
 export class CompanyModule { }
