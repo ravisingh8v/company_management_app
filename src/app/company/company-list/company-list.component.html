@@ -15,22 +15,16 @@
         <!-- main company list start here  -->
         <!-- data1 -->
         <div class="list border border-2 pt-2 px-1 m-0">
-            <li class="p-1 px-4 list border border-white d-flex align-items-center justify-content-between">
+            <li class="p-1 px-4 list border border-white d-flex align-items-center justify-content-between"
+                *ngFor="let data of companyData">
                 <a href="dfkuugfyguy"
                     class="d-flex text-decoration-none align-items-center justify-content-between w-100">
                     <div class="logo rounded-circle border border-white"><span class="">1R</span></div>
-                    <div>1Rivet</div>
+                    <div>{{data.name}}</div>
                     <div><a href="122"><span class="text-danger bi bi-trash3-fill fs-2"></span></a></div>
                 </a>
             </li>
-            <li class="p-1 px-4 list border border-white d-flex align-items-center justify-content-between">
-                <a href="dfkuugfyguy"
-                    class="d-flex text-decoration-none align-items-center justify-content-between w-100">
-                    <div class="logo rounded-circle border border-white"><span class="">1R</span></div>
-                    <div>1Rivet</div>
-                    <div><a href="122"><span class="text-danger bi bi-trash3-fill fs-2"></span></a></div>
-                </a>
-            </li>
+
 
         </div>
     </ul>
