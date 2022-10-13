@@ -5,6 +5,7 @@ import { CompanyComponent } from './company.component';
 
 const routes: Routes = [{
   path: '', component: CompanyComponent, children: [
+    { path: '', redirectTo: 'add', pathMatch: 'full' },
     { path: 'add', component: CompanyFormComponent },
     { path: 'edit/:id', component: CompanyFormComponent },
 

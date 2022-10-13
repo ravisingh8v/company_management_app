@@ -1,1 +1,24 @@
-<p class="">company-form works!</p>
+<div class="bg-light h-100 d-flex justify-content-center align-items-center">
+    <form [formGroup]="companyForm" class="w-50">
+
+        <div class="mb-3">
+            <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="name"
+                placeholder="Company Name">
+
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" id="exampleFormControlTextarea1" formControlName="description"
+                placeholder="Company Description" rows="5"></textarea>
+        </div>
+        <div class="mb-3">
+            <input class="form-control" type="select" placeholder="Select Tags" formControlName="tags" id="formFile">
+        </div>
+        <div class="mb-3">
+            <input class="form-control" type="file" id="formFile">
+        </div>
+        <div class="mb-3 float-end">
+            <button class="btn btn-lg btn-danger m-2">Reset</button>
+            <button class="btn btn-lg btn-primary m-2 me-0">Submit</button>
+        </div>
+    </form>
+</div>

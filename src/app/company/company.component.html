@@ -1,11 +1,13 @@
-<div class=" d-flex flex-grow-1 border border-2 border-dark h-100">
+<div class=" row mx-0 border border-2 border-dark h-100">
+    <!-- <div class="container-fluid"> -->
     <!-- company lists  -->
-    <div class="border-end border-dark">
+    <div class="col-3 h-100 p-0 border border-dark">
         <app-company-list></app-company-list>
     </div>
 
     <!-- company form here  -->
-    <div>
+    <div class="col-9 p-0">
         <router-outlet></router-outlet>
     </div>
+    <!-- </div> -->
 </div>
