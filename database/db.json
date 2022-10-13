@@ -1,29 +1,14 @@
 {
   "company": [
     {
-      "name": "Ravi",
-      "description": "lorem ipsum hello how are you -",
-      "tags": ""
+      "name": "ravi",
+      "description": "cxc",
+      "id": 2
     },
     {
-      "name": "ramesh",
-      "description": "lorem ipsum hello how are you -",
-      "tags": ""
-    },
-    {
-      "name": "!rivet",
-      "description": "lorem ipsum hello how are you -",
-      "tags": ""
-    },
-    {
-      "name": "1Rivet",
-      "description": "lorem ipsum hello how are you -",
-      "tags": ""
-    },
-    {
-      "name": "2Rivet",
-      "description": "lorem ipsum hello how are you -",
-      "tags": ""
+      "name": "ravi singh",
+      "description": "descriropg",
+      "id": 3
     }
   ]
 }

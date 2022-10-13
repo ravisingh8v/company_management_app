@@ -21,23 +21,23 @@ export class ApiService {
     return this.http.get<company[]>(url)
   }
 
-  postData(user: company[]): Observable<company> {
+  postData(company: company): Observable<company> {
     const url = this.baseUrl + 'company'
-    return this.http.post(url, user)
+    return this.http.post<company>(url, company)
   }
 
   onDelete(id: number): Observable<company> {
     const url = this.baseUrl + 'company/' + id
-    return this.http.delete(url)
+    return this.http.delete<company>(url)
   }
-  editData(user: company[], id: number): Observable<company> {
+  editData(company: company, id: number): Observable<company> {
     const url = this.baseUrl + 'company/' + id
-    return this.http.put(url, user)
+    return this.http.put<company>(url, company)
   }
 
-  getUserById(id: number): Observable<company> {
+  getDetailById(id: number): Observable<company> {
     const url = this.baseUrl + 'company/' + id
-    return this.http.get(url)
+    return this.http.get<company>(url)
   }
 }
 
