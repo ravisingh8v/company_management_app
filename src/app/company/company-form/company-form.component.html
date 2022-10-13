@@ -1,24 +1,43 @@
 <div class="bg-light h-100 d-flex justify-content-center align-items-center">
     <form [formGroup]="companyForm" class="w-50">
 
+        <!-- name  -->
         <div class="mb-3">
             <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="name"
-                placeholder="Company Name">
-
+                placeholder="Company Name"
+                [ngClass]="{'is-valid':companyForm.controls['name'].valid && companyForm.controls['name'].touched ,'is-invalid':companyForm.controls['name'].invalid && companyForm.controls['name'].touched }">
+            <!-- companyName Validation  -->
+            <div class="invalid-feedback" *ngIf="companyForm.controls['name'].errors?.['required']">
+                <span *ngIf="companyForm.controls['name'].touched">this feild is required</span>
+            </div>
         </div>
+        <!-- description  -->
         <div class="mb-3">
             <textarea class="form-control" id="exampleFormControlTextarea1" formControlName="description"
-                placeholder="Company Description" rows="5"></textarea>
+                placeholder="Company Description" rows="5"
+                [ngClass]="{
+                'is-valid':companyForm.controls['description'].valid && companyForm.controls['description'].touched ,
+                'is-invalid':( isSubmitted &&companyForm.controls['description'].invalid) || (companyForm.controls['description'].touched && companyForm.controls['description'].errors?.['required'])}"></textarea>
+            <!-- description Validation  -->
+            <div class="text-danger"
+                *ngIf="(isSubmitted && companyForm.controls['description'].invalid)  || (companyForm.controls['description'].errors?.['required'] && companyForm.controls['description'].touched)">
+                <span>this feild is required</span>
+            </div>
         </div>
+
+        <!-- Select Tags  -->
         <div class="mb-3">
             <input class="form-control" type="select" placeholder="Select Tags" formControlName="tags" id="formFile">
         </div>
+        <!-- choose file input  -->
         <div class="mb-3">
             <input class="form-control" type="file" id="formFile">
         </div>
+
+        <!-- buttons  -->
         <div class="mb-3 float-end">
-            <button class="btn btn-lg btn-danger m-2">Reset</button>
-            <button class="btn btn-lg btn-primary m-2 me-0">Submit</button>
+            <button class="btn btn-lg btn-danger m-2" (click)="onReset()">Reset</button>
+            <button class="btn btn-lg btn-primary m-2 me-0" (click)="onSubmit()" type="submit">Submit</button>
         </div>
     </form>
 </div>
