@@ -13,6 +13,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { CompanyCommunicationService } from '../share/service/company-communication.service';
 
 
+
 @NgModule({
   declarations: [
     CompanyComponent,
@@ -23,6 +24,7 @@ import { CompanyCommunicationService } from '../share/service/company-communicat
     CommonModule,
     CompanyRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
     ShareModule,
     NgSelectModule,

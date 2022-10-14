@@ -70,7 +70,10 @@ export class CompanyFormComponent implements OnInit {
 
       if (this.id) {
         this.companyService.editData(this.companyForm.value, this.id).subscribe(res => {
+
           this.setCompanyData.editCompanyDetail.next(res)
+=======
+
 
         })
       } else {

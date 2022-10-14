@@ -11,8 +11,13 @@ import { company } from '../company.model';
 export class CompanyListComponent implements OnInit {
   public companyData: company[]
 
+
   constructor(public companyService: ApiService,
     public setCompanyData: CompanyCommunicationService) {
+=======
+  public filter: string = ''
+  constructor(public companyService: ApiService) {
+
     this.companyData = []
 
   }
