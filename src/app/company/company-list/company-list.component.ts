@@ -18,7 +18,15 @@ export class CompanyListComponent implements OnInit {
   ngOnInit(): void {
     console.log('hello');
     this.getCompanyData()
+  }
 
+  onDelete(id: number) {
+    const deleteData = confirm('Are You Sure You Want to Delete This Record?')
+    if (deleteData) {
+      this.companyService.onDelete(id).subscribe(res => {
+        this.getCompanyData()
+      })
+    }
 
   }
 

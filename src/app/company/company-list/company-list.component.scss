@@ -6,6 +6,16 @@
     align-items: center;
 }
 
+.list-head span {
+    color: black;
+    font-weight: bold;
+}
+
 .list {
     margin-bottom: 8px;
+}
+
+td,
+th {
+    text-align: center;
 }

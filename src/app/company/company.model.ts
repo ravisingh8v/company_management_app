@@ -1,5 +1,6 @@
 export class company {
-    name?: string;
+    id!: number;
+    name!: string;
     description?: string;
     tags?: string;
 }
