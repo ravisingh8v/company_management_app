@@ -24,7 +24,7 @@ export class CompanyFormComponent implements OnInit {
     this.companyForm = formb.group({
       name: ['', [Validators.required]],
       description: ['', [Validators.required]],
-      // tags: ['', [Validators.required]]
+      tags: ['']
     })
     this.btnTitle = "Submit"
     this.id = 0

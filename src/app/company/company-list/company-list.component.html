@@ -1,6 +1,6 @@
-<div class="list-wrapper h-100 mt-0 bg-dark p-1">
+<div class="list-wrapper h-100 mt-0 bg-dark p-2 pt-0 overflow-hidden">
 
-    <ul class="m-0 p-0 w-100 ">
+    <ul class="m-0 p-0 h-100 w-100">
 
         <li class="w-100 p-3 border-dark border">
             <div>
@@ -14,21 +14,57 @@
 
         <!-- main company list start here  -->
         <!-- data1 -->
-        <div class="list border border-2 pt-2 px-1 m-0">
-            <li class="p-1 px-4 list border border-white d-flex align-items-center justify-content-between"
-                *ngFor="let data of companyData">
-                <a [routerLink]="['edit',data.id]"
-                    class="d-flex text-decoration-none align-items-center justify-content-between w-100">
+        <div class="list border border-2 pt-0 px-1 m-0 overflow-auto h-75">
+            <div class="position-sticky top-0 pt-2 bg-dark">
+                <li
+                    class="list-head p-1 px-4 list border border-white d-flex align-items-center justify-content-between bg-white">
+                    <span>Logo</span>
+                    <span>Name</span>
+                    <span>Action</span>
+                </li>
+
+            </div>
+            <div class="">
+                <li class="p-1 px-4 list border border-white d-flex align-items-center justify-content-between"
+                    *ngFor="let data of companyData">
                     <div class="logo rounded-circle border border-white"><span class="">{{data.name | uppercase |
-                            slice:0:2 }}</span></div>
-                    <div>{{data.name}}</div>
+                            getFirstLetter
+                            }}</span></div>
+                    <a [routerLink]="['edit',data.id]" class="text-decoration-none">
+                        <div>{{data.name | titlecase}}</div>
+                    </a>
                     <div><a (click)="onDelete(data.id)"><span class="text-danger bi bi-trash3-fill fs-2"></span></a>
                     </div>
-                </a>
-            </li>
-
-
+                    <!-- <div><a (click)="onDelete(data.id)"><span>v</span></a></div> -->
+                </li>
+            </div>
         </div>
     </ul>
-
 </div>
+
+
+<!-- <table class="table">
+    <thead>
+        <tr> -->
+<!-- <th scope="col">#</th> -->
+<!-- <th scope="col">Logo</th>
+            <th scope="col">Company Name</th> -->
+<!-- <th scope="col">Tags</th> -->
+<!-- <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody> -->
+<!-- <tr *ngFor="let data of companyData"> -->
+<!-- <th scope="row">1</th> -->
+<!-- <td>
+                <div class="logo border rounded-circle"><span>{{data.name | uppercase |slice:0:2 }}</span></div>
+            </td>
+            <td>{{data.name}}</td> -->
+<!-- <td>{{data.tags}}</td> -->
+<!-- <td>
+                <div><a (click)="onDelete(data.id)"><span class="text-danger bi bi-trash3-fill fs-2"></span></a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table> -->

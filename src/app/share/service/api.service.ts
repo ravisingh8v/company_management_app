@@ -13,30 +13,30 @@ export class ApiService {
 
 
   constructor(private http: HttpClient) {
-    this.baseUrl = 'http://localhost:3000/'
+    this.baseUrl = 'http://localhost:3000/company'
   }
 
   getCompanyData(): Observable<company[]> {
-    const url = this.baseUrl + 'company';
-    return this.http.get<company[]>(url)
+    // const url = this.baseUrl + 'company';
+    return this.http.get<company[]>(this.baseUrl)
   }
 
   postData(company: company): Observable<company> {
-    const url = this.baseUrl + 'company'
-    return this.http.post<company>(url, company)
+    // const url = this.baseUrl + 'company'
+    return this.http.post<company>(this.baseUrl, company)
   }
 
   onDelete(id: number): Observable<company> {
-    const url = this.baseUrl + 'company/' + id
+    const url = this.baseUrl + '/' + id
     return this.http.delete<company>(url)
   }
   editData(company: company, id: number): Observable<company> {
-    const url = this.baseUrl + 'company/' + id
+    const url = this.baseUrl + '/' + id
     return this.http.put<company>(url, company)
   }
 
   getDetailById(id: number): Observable<company> {
-    const url = this.baseUrl + 'company/' + id
+    const url = this.baseUrl + '/' + id
     return this.http.get<company>(url)
   }
 }
