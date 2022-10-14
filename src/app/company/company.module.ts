@@ -9,6 +9,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../share/service/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ShareModule } from '../share/share.module';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { CompanyCommunicationService } from '../share/service/company-communication.service';
 
 
 
@@ -24,11 +26,14 @@ import { ShareModule } from '../share/share.module';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    ShareModule
+    ShareModule,
+    NgSelectModule,
+    FormsModule
 
   ],
   providers: [
-    ApiService
+    ApiService,
+    CompanyCommunicationService
   ]
 
 })

@@ -1,13 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/share/service/api.service';
+import { CompanyCommunicationService } from 'src/app/share/service/company-communication.service';
 import { company } from '../company.model';
+
 
 @Component({
   selector: 'app-company-form',
   templateUrl: './company-form.component.html',
-  styleUrls: ['./company-form.component.scss']
+  styleUrls: ['./company-form.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class CompanyFormComponent implements OnInit {
   // @Input() companyData: company[]
@@ -16,11 +19,16 @@ export class CompanyFormComponent implements OnInit {
   public isSubmitted: boolean;
   public id: number;
   public btnTitle: string
+  public selected = [1]
+  public cars = [{ id: 1, Subject: 'Select', disbaled: true }, { id: 2, Subject: 'Bootstrap' }, { id: 1, Subject: 'SCSS' }];
+
   constructor(
+    public setCompanyData: CompanyCommunicationService,
     public formb: FormBuilder,
     private companyService: ApiService,
     private actRouter: ActivatedRoute
   ) {
+
     this.companyForm = formb.group({
       name: ['', [Validators.required]],
       description: ['', [Validators.required]],
@@ -63,10 +71,15 @@ export class CompanyFormComponent implements OnInit {
       if (this.id) {
         this.companyService.editData(this.companyForm.value, this.id).subscribe(res => {
 
+          this.setCompanyData.editCompanyDetail.next(res)
+=======
+
+
         })
       } else {
 
         this.companyService.postData(this.companyForm.value).subscribe((res) => {
+          this.setCompanyData.companyDetail.next(res)
         })
       }
       this.isSubmitted = false
@@ -85,5 +98,6 @@ export class CompanyFormComponent implements OnInit {
   }
 
   // get company Data 
+
 
 }
