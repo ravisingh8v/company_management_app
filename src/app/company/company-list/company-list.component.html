@@ -8,7 +8,10 @@
                     <div class="fs-5">Company</div>
                     <div><a routerLink="add"><span class="text-success fs-2 bi bi-plus-circle"></span></a></div>
                 </div>
-                <div class="mt-3"><input type="search" placeholder="Search" class="w-100 form-control"></div>
+                <div class="mt-3">
+                    <input type="search" placeholder="Search" name="search" [(ngModel)]="filter"
+                        class="w-100 form-control">
+                </div>
             </div>
         </li>
 
@@ -26,15 +29,17 @@
             </div>
             <div class="">
                 <li class="p-1 px-4 list border border-white d-flex align-items-center justify-content-between"
-                    *ngFor="let data of companyData">
-                    <div class="logo rounded-circle border border-white"><span class="">{{data.name | uppercase |
-                            getFirstLetter
-                            }}</span></div>
-                    <a [routerLink]="['edit',data.id]" class="text-decoration-none">
+                    *ngFor="let data of companyData | searchFilter: filter">
+
+                    <a [routerLink]="['edit',data.id]"
+                        class="text-decoration-none d-flex align-items-center justify-content-between w-100">
+                        <div class="logo rounded-circle border border-white"><span class="">
+                                {{data.name | uppercase | getFirstLetter}}</span></div>
                         <div>{{data.name | titlecase}}</div>
+                        <div><a (click)="onDelete(data.id)"><span class="text-danger bi bi-trash3-fill fs-2"></span></a>
+                        </div>
                     </a>
-                    <div><a (click)="onDelete(data.id)"><span class="text-danger bi bi-trash3-fill fs-2"></span></a>
-                    </div>
+
                     <!-- <div><a (click)="onDelete(data.id)"><span>v</span></a></div> -->
                 </li>
             </div>
