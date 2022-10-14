@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { company } from 'src/app/company/company.model';
 import { HttpClient } from '@angular/common/http';
 
@@ -8,13 +8,21 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class ApiService {
-  public baseUrl: string;
 
+
+  public baseUrl: string;
+  private employeeDetail: Subject<company>;
 
 
   constructor(private http: HttpClient) {
     this.baseUrl = 'http://localhost:3000/company'
+    this.employeeDetail = new Subject
   }
+
+  public setEmployee(company: company) {
+    this.employeeDetail.next(company);
+  }
+
 
   getCompanyData(): Observable<company[]> {
     // const url = this.baseUrl + 'company';

@@ -1,57 +1,16 @@
 {
   "company": [
     {
-      "name": "ravi singh ",
-      "description": "cxc",
-      "tags": "",
+      "name": "Ravi",
+      "description": "Intern",
+      "tags": "Frontend",
+      "id": 1
+    },
+    {
+      "name": "ravin singh",
+      "description": "intern",
+      "tags": "backend",
       "id": 2
-    },
-    {
-      "name": "ravi singh",
-      "description": "descriropg",
-      "id": 3
-    },
-    {
-      "name": "sc",
-      "description": "sc",
-      "tags": "",
-      "id": 6
-    },
-    {
-      "name": "ddv",
-      "description": "dvdv",
-      "tags": "dvdv",
-      "id": 7
-    },
-    {
-      "name": "ddffdf",
-      "description": "dfd",
-      "tags": "",
-      "id": 8
-    },
-    {
-      "name": "ravi",
-      "description": "feff",
-      "tags": "efef",
-      "id": 9
-    },
-    {
-      "name": "raviasuhkgu",
-      "description": "dvdvdv",
-      "tags": "dvdv",
-      "id": 10
-    },
-    {
-      "name": "dvdv",
-      "description": "dvdv",
-      "tags": "vdvdv",
-      "id": 11
-    },
-    {
-      "name": "dvdv",
-      "description": "dvdv",
-      "tags": "dvdv",
-      "id": 12
     }
   ]
 }
