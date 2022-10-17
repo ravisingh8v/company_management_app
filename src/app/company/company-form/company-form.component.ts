@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/share/service/api.service';
+import { BreadcrumbService } from 'src/app/share/service/breadcrumb.service';
 import { CompanyCommunicationService } from 'src/app/share/service/company-communication.service';
 import { company } from '../company.model';
 
@@ -20,13 +21,14 @@ export class CompanyFormComponent implements OnInit {
   public id: number;
   public btnTitle: string
   public selected = [1]
-  public cars = [{ id: 1, Subject: 'Select', disbaled: true }, { id: 2, Subject: 'Bootstrap' }, { id: 1, Subject: 'SCSS' }];
+  public cars = [{ id: 1, Subject: 'Angular', }, { id: 2, Subject: 'Bootstrap' }, { id: 3, Subject: 'SCSS' }];
 
   constructor(
     public setCompanyData: CompanyCommunicationService,
     public formb: FormBuilder,
     private companyService: ApiService,
-    private actRouter: ActivatedRoute
+    private actRouter: ActivatedRoute,
+    private breadcrumb: BreadcrumbService
   ) {
 
     this.companyForm = formb.group({
@@ -49,7 +51,6 @@ export class CompanyFormComponent implements OnInit {
 
   }
   ngOnInit(): void {
-
   }
 
   getCompanyData() {
@@ -77,6 +78,7 @@ export class CompanyFormComponent implements OnInit {
 
         this.companyService.postData(this.companyForm.value).subscribe((res) => {
           this.setCompanyData.companyDetail.next(res)
+          alert("successfull")
         })
       }
       this.isSubmitted = false
