@@ -9,8 +9,12 @@
 @import 'assets/scss/base/index';
 
 
+
 // bootstrap
 @import 'assets/scss/vender/index';
+
+// ng select style 
+@import '~@ng-select/ng-select/themes/default.theme.css';
 
 /* Importing Bootstrap SCSS file. */
 // @import '~bootstrap/scss/bootstrap';

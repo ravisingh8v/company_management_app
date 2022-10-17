@@ -5,10 +5,12 @@ import { SearchFilterPipe } from './pipe/search-filter.pipe';
 
 
 
+
 @NgModule({
   declarations: [
     GetFirstLetterPipe,
-    SearchFilterPipe
+    SearchFilterPipe,
+
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { SearchFilterPipe } from './pipe/search-filter.pipe';
   ],
   exports: [
     GetFirstLetterPipe,
-    SearchFilterPipe
+    SearchFilterPipe,
+
   ]
 })
 export class ShareModule { }

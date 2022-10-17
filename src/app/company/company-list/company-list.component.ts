@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/share/service/api.service';
+import { BreadcrumbService } from 'src/app/share/service/breadcrumb.service';
 import { CompanyCommunicationService } from 'src/app/share/service/company-communication.service';
 import { company } from '../company.model';
 
@@ -13,13 +14,17 @@ export class CompanyListComponent implements OnInit {
 
   public filter: string = ''
 
+
   constructor(public companyService: ApiService,
-    public setCompanyData: CompanyCommunicationService) {
+    public setCompanyData: CompanyCommunicationService,
+    private breadcrumb: BreadcrumbService
+  ) {
 
     this.companyData = []
 
   }
 
+  // ng on init 
   ngOnInit(): void {
     console.log('hello');
     this.setCompanyData.companyDetail.subscribe((res) => {
@@ -36,6 +41,15 @@ export class CompanyListComponent implements OnInit {
     this.getCompanyData()
   }
 
+  // BreadCrumb 
+  redirectBreadEdit(name: string) {
+    this.breadcrumb.breadcrumb.next("Edit / " + name)
+  }
+  redirectBreadAdd() {
+    this.breadcrumb.breadcrumb.next("Add")
+  }
+
+  // delete method 
   onDelete(id: number) {
     const deleteData = confirm('Are You Sure You Want to Delete This Record?')
     if (deleteData) {
@@ -45,7 +59,7 @@ export class CompanyListComponent implements OnInit {
     }
 
   }
-
+  // get companyData server
   getCompanyData() {
     this.companyService.getCompanyData().subscribe((response) => {
       this.companyData = response

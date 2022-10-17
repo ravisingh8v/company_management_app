@@ -33,7 +33,8 @@ import { CompanyCommunicationService } from '../share/service/company-communicat
   ],
   providers: [
     ApiService,
-    CompanyCommunicationService
+    CompanyCommunicationService,
+
   ]
 
 })
