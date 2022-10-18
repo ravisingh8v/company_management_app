@@ -32,7 +32,8 @@
         <div>
             <ng-select [multiple]="true" formControlName="tags" id="formFile" class="mb-3">
                 <!-- <ng-option disabled="Select-Tags" class="disabled"></ng-option> -->
-                <ng-option *ngFor="let car of cars" [value]="car.id"><span class="text-black"> {{car.Subject}}</span>
+                <ng-option *ngFor="let item of subject" [value]="item"><span class="text-black">
+                        {{item.subject}}</span>
                 </ng-option>
             </ng-select>
         </div>

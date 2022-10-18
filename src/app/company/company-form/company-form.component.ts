@@ -20,8 +20,7 @@ export class CompanyFormComponent implements OnInit {
   public isSubmitted: boolean;
   public id: number;
   public btnTitle: string
-  public selected = [1]
-  public cars = [{ id: 1, Subject: 'Angular', }, { id: 2, Subject: 'Bootstrap' }, { id: 3, Subject: 'SCSS' }];
+  public subject = [{ id: 1, subject: 'Angular', }, { id: 2, subject: 'Bootstrap' }, { id: 3, subject: 'SCSS' }];
 
   constructor(
     public setCompanyData: CompanyCommunicationService,
