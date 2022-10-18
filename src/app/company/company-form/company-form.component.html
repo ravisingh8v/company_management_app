@@ -30,11 +30,8 @@
             <input class="form-control" type="select" placeholder="Select Tags" formControlName="tags" id="formFile">
         </div> -->
         <div>
-            <ng-select [multiple]="true" formControlName="tags" id="formFile" class="mb-3">
-                <!-- <ng-option disabled="Select-Tags" class="disabled"></ng-option> -->
-                <ng-option *ngFor="let item of subject" [value]="item"><span class="text-black">
-                        {{item.subject}}</span>
-                </ng-option>
+            <ng-select [items]="tags" bindLabel="subject" [multiple]="true" formControlName="tags"
+                placeholder="Select Tag" class="mb-3">
             </ng-select>
         </div>
 
