@@ -43,13 +43,16 @@ export class CompanyFormComponent implements OnInit {
     this.actRouter.params.subscribe((res) => {
       this.id = res['id']
       if (this.id) {
-        this.getDetailsById()
+        // this.getDetailsById()
         this.btnTitle = "Edit"
       }
     })
 
   }
   ngOnInit(): void {
+    this.actRouter.data.subscribe(res => {
+      this.companyForm.patchValue(res['company'])
+    })
   }
 
   getCompanyData() {
@@ -58,11 +61,13 @@ export class CompanyFormComponent implements OnInit {
     })
 
   }
-  getDetailsById() {
-    this.companyService.getDetailById(this.id).subscribe(res => {
-      this.companyForm.patchValue(res)
-    })
-  }
+  // getDetailsById() {
+  //   this.companyService.getDetailById(this.id).subscribe(res => {
+  //     this.companyForm.patchValue(res)
+  //   })
+  // }
+
+
 
   onSubmit() {
     this.isSubmitted = true
@@ -70,7 +75,6 @@ export class CompanyFormComponent implements OnInit {
 
       if (this.id) {
         this.companyService.editData(this.companyForm.value, this.id).subscribe(res => {
-
           this.setCompanyData.editCompanyDetail.next(res)
         })
       } else {
@@ -90,10 +94,9 @@ export class CompanyFormComponent implements OnInit {
     this.companyForm.reset()
   }
 
-  postCompanyData() {
-
-    console.log(this.companyData);
-  }
+  // postCompanyData() {
+  //   console.log(this.companyData);
+  // }
 
   // get company Data 
 

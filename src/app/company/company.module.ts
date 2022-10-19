@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ShareModule } from '../share/share.module';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { CompanyCommunicationService } from '../share/service/company-communication.service';
+import { CompanyResolver } from './company.resolver';
 
 
 
@@ -34,6 +35,7 @@ import { CompanyCommunicationService } from '../share/service/company-communicat
   providers: [
     ApiService,
     CompanyCommunicationService,
+    CompanyResolver
 
   ]
 
