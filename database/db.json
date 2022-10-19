@@ -2,194 +2,183 @@
   "company": [
     {
       "name": "ravi singh",
-      "description": "descriropg",
+      "description": "bgmi game ,mobile",
+      "tags": [
+        {
+          "id": 2,
+          "subject": "Bootstrap"
+        },
+        {
+          "id": 1,
+          "subject": "Angular"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "samkeet",
+      "description": "snake game",
+      "tags": [
+        {
+          "id": 3,
+          "subject": "SCSS"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "amresh prasad",
+      "description": "ludo game",
+      "tags": [
+        {
+          "id": 2,
+          "subject": "Bootstrap"
+        }
+      ],
       "id": 3
     },
     {
-      "name": "samkeet kevat",
-      "description": "intern",
+      "name": "manish p",
+      "description": "something",
       "tags": [
-        2
+        {
+          "id": 3,
+          "subject": "SCSS"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "name": "manish",
+      "description": "something",
+      "tags": [
+        {
+          "id": 3,
+          "subject": "SCSS"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "name": "manish",
+      "description": "something",
+      "tags": [
+        {
+          "id": 3,
+          "subject": "SCSS"
+        }
       ],
       "id": 6
     },
     {
-      "name": "ravi",
+      "name": "manish",
       "description": "something",
       "tags": [
-        1
+        {
+          "id": 3,
+          "subject": "SCSS"
+        }
+      ],
+      "id": 7
+    },
+    {
+      "name": "manish",
+      "description": "something",
+      "tags": [
+        {
+          "id": 3,
+          "subject": "SCSS"
+        }
+      ],
+      "id": 8
+    },
+    {
+      "name": "manish",
+      "description": "something",
+      "tags": [
+        {
+          "id": 3,
+          "subject": "SCSS"
+        }
       ],
       "id": 9
     },
     {
-      "name": "dcdc",
-      "description": "dvdvdv",
+      "name": "manish",
+      "description": "something",
       "tags": [
-        1
+        {
+          "id": 3,
+          "subject": "SCSS"
+        }
       ],
       "id": 10
     },
     {
-      "name": "ramesh",
-      "description": "surubskfjbkjvbujb",
+      "name": "manish",
+      "description": "something",
       "tags": [
-        1,
-        2
+        {
+          "id": 3,
+          "subject": "SCSS"
+        }
       ],
       "id": 11
     },
     {
-      "name": "SUR2AHS",
-      "description": "SAFDF",
+      "name": "manish",
+      "description": "something",
       "tags": [
-        1
+        {
+          "id": 3,
+          "subject": "SCSS"
+        }
       ],
       "id": 12
     },
     {
-      "name": "SFSF",
-      "description": "SFSF",
+      "name": "manish",
+      "description": "something",
       "tags": [
-        1
+        {
+          "id": 3,
+          "subject": "SCSS"
+        }
       ],
       "id": 13
     },
     {
-      "name": "SFDGDG",
-      "description": "DGDG",
+      "name": "manish",
+      "description": "something",
       "tags": [
-        2
+        {
+          "id": 3,
+          "subject": "SCSS"
+        }
       ],
       "id": 14
     },
     {
-      "name": "DSGDG",
-      "description": "GDGDG",
+      "name": "manish",
+      "description": "something",
       "tags": [
-        3
+        {
+          "id": 3,
+          "subject": "SCSS"
+        }
       ],
       "id": 15
     },
     {
-      "name": "YTYTYY",
-      "description": "TYTYT",
+      "name": "manish",
+      "description": "something",
       "tags": [
-        2
+        {
+          "id": 3,
+          "subject": "SCSS"
+        }
       ],
       "id": 16
-    },
-    {
-      "name": "TTTYTYTY",
-      "description": "TYTY",
-      "tags": [
-        2
-      ],
-      "id": 17
-    },
-    {
-      "name": "TYTY",
-      "description": "TYTYTY",
-      "tags": [
-        2
-      ],
-      "id": 18
-    },
-    {
-      "name": "DUMMY",
-      "description": "TEST",
-      "tags": [
-        2
-      ],
-      "id": 19
-    },
-    {
-      "name": "suresh",
-      "description": "singh ravi",
-      "tags": [
-        2
-      ],
-      "id": 20
-    },
-    {
-      "name": "new ",
-      "description": "demo",
-      "tags": [
-        "Angular"
-      ],
-      "id": 21
-    },
-    {
-      "name": "demo2",
-      "description": "dummy text",
-      "tags": [
-        {
-          "id": 2,
-          "subject": "Bootstrap"
-        }
-      ],
-      "id": 22
-    },
-    {
-      "name": "trial 3 ",
-      "description": "dummy text",
-      "tags": [
-        {
-          "id": 2,
-          "subject": "Bootstrap"
-        },
-        {
-          "id": 1,
-          "subject": "Angular"
-        },
-        {
-          "id": 3,
-          "subject": "SCSS"
-        }
-      ],
-      "id": 23
-    },
-    {
-      "name": "demo 4 ",
-      "description": "dummy",
-      "tags": [
-        "Angular",
-        "SCSS"
-      ],
-      "id": 24
-    },
-    {
-      "name": "demo 5 ",
-      "description": "dummy",
-      "tags": [
-        {
-          "id": 1,
-          "subject": "Angular"
-        },
-        {
-          "id": 3,
-          "subject": "SCSS"
-        }
-      ],
-      "id": 25
-    },
-    {
-      "name": "demo 6 ",
-      "description": "dummy",
-      "tags": [
-        {
-          "id": 2,
-          "subject": "Bootstrap"
-        },
-        {
-          "id": 3,
-          "subject": "SCSS"
-        },
-        {
-          "id": 1,
-          "subject": "Angular"
-        }
-      ],
-      "id": 26
     }
   ]
 }
