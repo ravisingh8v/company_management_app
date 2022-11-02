@@ -4,6 +4,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+
+    img {
+        width: auto;
+        height: 40px;
+    }
 }
 
 .list-head span {

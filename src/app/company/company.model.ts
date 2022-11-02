@@ -3,4 +3,7 @@ export class company {
     name!: string;
     description?: string;
     tags?: string;
+    compamnyImageName?: string
+    companyImagePath?: string
+
 }

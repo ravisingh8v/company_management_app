@@ -37,10 +37,11 @@
 
 
 
-
         <!-- choose file input  -->
         <div class="mb-3">
-            <input class="form-control" type="file" id="formFile" multiple>
+            <input class="form-control" (change)="onSelectFile($event)" type="file" id="formFile">
+            <img [src]="imagePath" class="w-25 h-25">
+            <!-- *ngIf="showImage"  -->
         </div>
 
         <!-- buttons  -->

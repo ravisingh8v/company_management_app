@@ -25,6 +25,8 @@
                     <span>Logo</span>
                     <span>Name</span>
                     <span>Action</span>
+                    <span>Status</span>
+
                 </li>
 
             </div>
@@ -33,14 +35,24 @@
                     *ngFor="let data of companyData | searchFilter: filter">
 
                     <div class="logo rounded-circle border border-white"><span class="">
-                            {{data.name | uppercase | getFirstLetter}}</span></div>
+                            <!-- {{data.name | uppercase | getFirstLetter}} -->
+                            <img class="" [src]="data.compamnyImagePath">
+                        </span></div>
                     <a [routerLink]="['edit',data.id]" (click)="redirectBreadEdit(data.name)"
                         class="text-decoration-none d-flex align-items-center justify-content-between">
                         <div>{{data.name | titlecase}}</div>
                     </a>
+
                     <div><a (click)="onDelete(data.id)"><span class="text-danger bi bi-trash3-fill fs-2"></span></a>
                     </div>
-
+                    <div>
+                        <form action="">
+                            <select class="bg-dark" name="" id="">
+                                <option value="open" selected class="">open</option>
+                                <option value="close">close</option>
+                            </select>
+                        </form>
+                    </div>
                     <!-- <div><a (click)="onDelete(data.id)"><span>v</span></a></div> -->
                 </li>
             </div>
